@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 const Header = props => {
   const classes = useStyles();
 
-  return <Paper className={classes.root}>avisenna was here</Paper>;
+  return <Paper className={classes.root}>LOGO</Paper>;
 };
 
 export default Header;
