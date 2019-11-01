@@ -1,3 +1,8 @@
+Login - 13517052
+Home - 13517052
+Transfer - 13517097
+Transaction History - 13517010
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
