@@ -1,5 +1,5 @@
 import React from 'react';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         // border: "5px solid white",  // #66BBFF
         padding: "100px 0",
         // borderRadius: "20px",
-        // backgroundColor: "lightblue"
+        backgroundColor: "lightblue"
 
     },
     paper1: {
@@ -48,11 +48,12 @@ const HomePage = props => {
                     <Typography className={classes.text} variant="h6" gutterBottom>Saldo rekening: Rp. 1000.000</Typography>
                 </Paper></Grid>
                 <Grid justify="center" container xs={12} spacing={3}>
-                    <Grid item xs={6} sm={3}><Paper className={classes.paper}>
-                        <Typography variant="h5" gutterBottom>Riwayat Transaksi</Typography>
-                    </Paper></Grid>
-                    <Grid item xs={6} sm={3}><Paper className={classes.paper}>
+                    <Grid item xs={6} sm={3}><Paper className={classes.paper}><Button>
+                        <Typography  variant="h5" gutterBottom>Riwayat Transaksi</Typography>
+                    </Button></Paper></Grid>
+                    <Grid item xs={6} sm={3}><Paper className={classes.paper}><Button>
                         <Typography variant="h5" gutterBottom>Transfer</Typography>
+                    </Button>
                     </Paper></Grid>
                 </Grid>
             </Grid>
