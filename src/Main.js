@@ -1,13 +1,14 @@
 import React from "react";
-import Header from "./Header";
-import LandingPage from "./LandingPage";
+import Header from "./components/Header";
+import LandingPage from "./views/LandingPage";
+import Grid from "@material-ui/core/Grid";
 
 const Main = () => {
   return (
-    <div>
+    <Grid>
       <Header />
       <LandingPage />
-    </div>
+    </Grid>
   );
 };
 
