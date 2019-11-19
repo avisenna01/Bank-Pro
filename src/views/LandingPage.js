@@ -17,20 +17,15 @@ const useStyles = makeStyles(theme => ({
     fontSize: "70px",
     color: "white"
   },
-  inputBox: {
-    width: "200px",
-    backgroundColor: "green",
-    height: "500px"
-  }
 }));
 
-// const style = {
-//   // inputBox: {
-//   width: "200px",
-//   backgroundColor: "green",
-//   height: "500px"
-//   // }
-// }
+const inputBox = {
+
+  width: "250px",
+  backgroundColor: "white",
+  height: "30px"
+
+}
 
 const LandingPage = props => {
   const classes = useStyles();
@@ -52,7 +47,7 @@ const LandingPage = props => {
         <Typography className={classes.title}>Bank Pro</Typography>
       </Grid>
       <Grid item xs={12} container justify="flex-end" alignItems="flex-start">
-        <input classesName={classes.inputBox} type="text" placeholder="Account Number" />
+        <input style={inputBox} type="text" placeholder="Account Number" />
       </Grid>
     </Grid>
   );
