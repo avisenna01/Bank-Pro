@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-// import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
-import applepay from "../assets/Apple_Pay.png"
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -12,24 +10,29 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(3, 9),
     backgroundColor: "#111113",
     borderRadius: "0px",
-    height: "auto"
+    height: "auto",
+
   },
   title: {
     fontSize: "70px",
     color: "white",
-    fontFamily: 'Alata, sans-serif'
+    fontFamily: 'Alata, sans-serif',
+    textAlign: "center",
+    marginTop: "160px"
   },
 }));
 
 const inputBox = {
+
   border: "4px solid #66BBFF",
-  marginLeft: "550px",
+  marginTop: "15px",
   width: "250px",
   backgroundColor: "white",
-  height: "50px",
+  height: "40px",
   borderRadius: "10px",
   fontSize: "20px",
-  padding: "5px"
+  padding: "5px",
+  paddingLeft: "15px"
 }
 
 const LandingPage = props => {
@@ -45,10 +48,8 @@ const LandingPage = props => {
     <Grid container className={classes.root}>
       <Grid item xs={12}>
         <Typography className={classes.title}>Bank Pro</Typography>
-
       </Grid>
-      <Grid item xs={12} container justify="center" alignItems="center">
-        <img src={applepay} alt="Apple Pay" style={{ marginLeft: "500px" }} />
+      <Grid item xs={12} container justify="center" alignItems="center" style={{ paddingBottom: "400px" }}>
         <input onChange={handleChange} value={acc} style={inputBox} type="text" placeholder="Account Number" />
       </Grid>
     </Grid>
