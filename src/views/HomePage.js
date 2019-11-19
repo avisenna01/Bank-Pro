@@ -10,25 +10,18 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
-        // backgroundColor: "#111113" 
     },
     paper: {
-        padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
-        // border: "5px solid white",  // #66BBFF
         padding: "100px 0",
-        // borderRadius: "20px",
-        backgroundColor: "lightblue"
+        backgroundColor: "lightblue",
 
     },
     paper1: {
-        padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
-        // border: "5px solid white",
         padding: "100px 0",
-        // borderRadius: "20px",
         backgroundImage: `url(${Background1})`
     },
     text: {
@@ -48,11 +41,11 @@ const HomePage = props => {
                     <Typography className={classes.text} variant="h6" gutterBottom>Nama Bank: BNI</Typography>
                     <Typography className={classes.text} variant="h6" gutterBottom>Saldo rekening: Rp. 1000.000</Typography>
                 </Paper></Grid>
-                <Grid justify="center" container xs={12} spacing={3}>
-                    <Grid item xs={6} sm={3}><Paper className={classes.paper}><
-                        Button component={Link} to="/riwayat">
-                        <Typography variant="h5" gutterBottom>Riwayat Transaksi</Typography>
-                    </Button></Paper></Grid>
+                <Grid style={{ marginLeft: "1px" }} justify="center" container xs={12} spacing={3}>
+                    <Grid item xs={6} sm={3}><Paper className={classes.paper}>
+                        <Button component={Link} to="/riwayat">
+                            <Typography variant="h5" gutterBottom>Riwayat Transaksi</Typography>
+                        </Button></Paper></Grid>
                     <Grid item xs={6} sm={3}><Paper className={classes.paper}>
                         <Button component={Link} to="/transfer">
                             <Typography variant="h5" gutterBottom>Transfer</Typography>
@@ -61,9 +54,7 @@ const HomePage = props => {
                 </Grid>
             </Grid>
         </div >
-    )
-
-
+    );
 }
 
 export default HomePage;
