@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -20,25 +20,21 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const inputBox = {
-
   width: "250px",
   backgroundColor: "white",
-  height: "30px"
-
+  height: "50px",
+  borderRadius: "10px",
+  fontSize: "20px",
+  padding: "5px"
 }
 
 const LandingPage = props => {
+
   const classes = useStyles();
+  const [acc, setAcc] = useState();
 
-  const [values, setValues] = React.useState({
-    name: "",
-    age: "",
-    multiline: "Controlled",
-    currency: "EUR"
-  });
-
-  const handleChange = name => event => {
-    setValues({ ...values, [name]: event.target.value });
+  const handleChange = event => {
+    setAcc(event.target.value);
   };
 
   return (
@@ -47,7 +43,7 @@ const LandingPage = props => {
         <Typography className={classes.title}>Bank Pro</Typography>
       </Grid>
       <Grid item xs={12} container justify="flex-end" alignItems="flex-start">
-        <input style={inputBox} type="text" placeholder="Account Number" />
+        <input onChange={handleChange} value={acc} style={inputBox} type="text" placeholder="Account Number" />
       </Grid>
     </Grid>
   );
