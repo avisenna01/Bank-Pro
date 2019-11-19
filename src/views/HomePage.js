@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Background1 from "../assets/nature.jpeg"
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -48,16 +49,18 @@ const HomePage = props => {
                     <Typography className={classes.text} variant="h6" gutterBottom>Saldo rekening: Rp. 1000.000</Typography>
                 </Paper></Grid>
                 <Grid justify="center" container xs={12} spacing={3}>
-                    <Grid item xs={6} sm={3}><Paper className={classes.paper}><Button>
-                        <Typography  variant="h5" gutterBottom>Riwayat Transaksi</Typography>
+                    <Grid item xs={6} sm={3}><Paper className={classes.paper}><
+                        Button component={Link} to="/riwayat">
+                        <Typography variant="h5" gutterBottom>Riwayat Transaksi</Typography>
                     </Button></Paper></Grid>
-                    <Grid item xs={6} sm={3}><Paper className={classes.paper}><Button>
-                        <Typography variant="h5" gutterBottom>Transfer</Typography>
-                    </Button>
+                    <Grid item xs={6} sm={3}><Paper className={classes.paper}>
+                        <Button component={Link} to="/transfer">
+                            <Typography variant="h5" gutterBottom>Transfer</Typography>
+                        </Button>
                     </Paper></Grid>
                 </Grid>
             </Grid>
-        </div>
+        </div >
     )
 
 
