@@ -13,7 +13,8 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
-        border: "5px solid #66BBFF"
+        border: "5px solid #66BBFF",
+        padding: "100px 0"
     },
 }));
 
@@ -23,7 +24,7 @@ const HomePage = props => {
 
     return (
         <div className={classes.root}>
-            <Grid container xs={12} >
+            <Grid style={{ marginLeft: "1px" }} container xs={12} spacing={3} >
                 <Grid style={{ marginBottom: "55px" }} item xs={12}><Paper className={classes.paper}>
                     <Typography variant="h5" gutterBottom>Nama pemilik rekening</Typography>
                     <Typography variant="subtitle1" gutterBottom>Nomor Rekening: 987656789876</Typography>
