@@ -42,7 +42,9 @@ const LoginPage = props => {
 
   const handleChange = event => {
     setAcc(event.target.value);
+    console.log(acc)
   };
+
 
   return (
     <Grid container className={classes.root}>
