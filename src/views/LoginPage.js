@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   title: {
     fontSize: "70px",
     color: "white",
-    fontFamily: 'Alata, sans-serif',
+    fontFamily: 'SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
     textAlign: "center",
     marginTop: "160px"
   },
@@ -35,7 +35,7 @@ const inputBox = {
   paddingLeft: "15px"
 }
 
-const LandingPage = props => {
+const LoginPage = props => {
 
   const classes = useStyles();
   const [acc, setAcc] = useState();
@@ -56,4 +56,4 @@ const LandingPage = props => {
   );
 };
 
-export default LandingPage;
+export default LoginPage;
