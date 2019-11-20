@@ -49,11 +49,11 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
+    createData('juli 16', 'debit', `Rp` + 600000, 24525395793),
+    createData('juni 18', 'kredit', `Rp` + 9000, 37893650258),
+    createData('mei 10', 'kredit', `Rp` + 16050000, 24523955355),
+    createData('oktober 10', 'debit', `Rp` + 3700, 67525644553),
+    createData('september 1', 'kredit', `Rp` + 16000, 49345235325),
 ];
 
 const History = props => {
@@ -66,11 +66,11 @@ const History = props => {
                     <Table className={classes.table} aria-label="simple table">
                         <TableHead>
                             <StyledTableRow>
-                                <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-                                <StyledTableCell align="right">Calories</StyledTableCell>
-                                <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
-                                <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
-                                <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
+                                <StyledTableCell>Waktu Transaksi</StyledTableCell>
+                                <StyledTableCell align="right">Jenis Transaksi</StyledTableCell>
+                                <StyledTableCell align="right">Jumlah Transaksi</StyledTableCell>
+                                <StyledTableCell align="right">Rekening Terkait</StyledTableCell>
+
                             </StyledTableRow>
                         </TableHead>
                         <TableBody>
@@ -82,7 +82,7 @@ const History = props => {
                                     <StyledTableCell align="right">{row.calories}</StyledTableCell>
                                     <StyledTableCell align="right">{row.fat}</StyledTableCell>
                                     <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-                                    <StyledTableCell align="right">{row.protein}</StyledTableCell>
+
                                 </StyledTableRow>
                             ))}
                         </TableBody>
