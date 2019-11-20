@@ -58,21 +58,29 @@ const HomePage = props => {
                 text: 'Masukkan jumlah nominal'
             },
         ]).then((result) => {
-            // console.log(result.value)
+            console.log("avisennalesgooo")
+            console.log(result.value)
             if (result.value) {
-                const answers = JSON.stringify(result.value)
-
+                const texting = ["nemo", "dori"]
+                console.log(texting)
+                const answers = result.value
+                console.log(answers[0])
+                console.log(answers[1])
+                console.log(answers[1])
+                console.log(answers)
+                console.log("###############")
                 MySwal.fire({
                     title: 'Last Check!',
                     html: `
                   Spesifikasi Transfer:
                     <pre>${answers}</pre>
                 `,
+                    // input: `${answers[0]}`,
                     confirmButtonText: 'Submit!',
                     showCancelButton: true,
                     showLoaderOnConfirm: true,
-                    preConfirm: (answers) => {
-                        return fetch(`//api.github.com/users/${answers}`)
+                    preConfirm: () => {
+                        return fetch(`//api.github.com/users/${answers[0]}`)
                             .then(response => {
                                 if (!response.ok) {
                                     throw new Error(response.statusText)
@@ -89,10 +97,14 @@ const HomePage = props => {
                 }).then((result) => {
                     if (result.value) {
                         Swal.fire({
-                            title: `${result.value}`,
-                            text: `${result}`
+                            title: `${result.value} title`,
+                            text: `${result} text`,
+                            imageUrl: result.value.avatar_url
                         })
+                        console.log("------------")
                         console.log(result)
+                        console.log(result.value)
+                        console.log("++++++++++++")
                     }
                 })
                 // i = 1;
