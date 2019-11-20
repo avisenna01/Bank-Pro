@@ -71,8 +71,8 @@ const HomePage = props => {
                     confirmButtonText: 'Submit!',
                     showCancelButton: true,
                     showLoaderOnConfirm: true,
-                    preConfirm: (login) => {
-                        return fetch(`//api.github.com/users/${login}`)
+                    preConfirm: (answers) => {
+                        return fetch(`//api.github.com/users/${answers}`)
                             .then(response => {
                                 if (!response.ok) {
                                     throw new Error(response.statusText)
@@ -89,9 +89,10 @@ const HomePage = props => {
                 }).then((result) => {
                     if (result.value) {
                         Swal.fire({
-                            title: `${result.value.login}'s avatar`,
-                            imageUrl: result.value.avatar_url
+                            title: `${result.value}`,
+                            text: `${result}`
                         })
+                        console.log(result)
                     }
                 })
                 // i = 1;
