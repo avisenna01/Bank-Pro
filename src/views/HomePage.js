@@ -23,13 +23,14 @@ const useStyles = makeStyles(theme => ({
 
     },
     paper1: {
-        textAlign: 'center',
+        textAlign: 'left',
         color: theme.palette.text.secondary,
-        padding: "100px 0",
+        padding: "100px 70px",
         backgroundImage: `url(${Background1})`
     },
     text: {
-        color: "white"
+        color: "white",
+        fontFamily: 'Work Sans, sans-serif'
     }
 }));
 
