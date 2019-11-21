@@ -2,11 +2,13 @@ import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import { fontFamily } from '@material-ui/system';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -16,23 +18,32 @@ const useStyles = makeStyles(theme => ({
         overflowX: 'auto',
         paddingTop: "150px",
         paddingBottom: "150px"
-
     },
     table: {
         minWidth: 1000,
         minHeight: 500,
-
     },
-
+    paper: {
+        padding: theme.spacing(3, 2),
+        outline: "5px solid #66BBFF",
+    },
+    title: {
+        fontSize: "50px",
+        fontFamily: 'Roboto, sans-serif'
+    },
+    tableTitle: {
+        fontSize: "20px"
+    }
 }));
 
 const StyledTableCell = withStyles(theme => ({
     head: {
-        backgroundColor: theme.palette.common.black,
+        backgroundColor: "#0070C9",
         color: theme.palette.common.white,
     },
     body: {
-        fontSize: 14,
+        fontSize: 16,
+        fontFamily: 'Roboto, sans-serif'
     },
 }))(TableCell);
 
@@ -63,28 +74,31 @@ const History = props => {
         <div className={classes.root}>
             <Grid container justify="center" alignItems="center">
                 <Grid item>
-                    <Table className={classes.table} aria-label="simple table">
-                        <TableHead>
-                            <StyledTableRow>
-                                <StyledTableCell>Waktu Transaksi</StyledTableCell>
-                                <StyledTableCell align="right">Jenis Transaksi</StyledTableCell>
-                                <StyledTableCell align="right">Jumlah Transaksi</StyledTableCell>
-                                <StyledTableCell align="right">Rekening Terkait</StyledTableCell>
-                            </StyledTableRow>
-                        </TableHead>
-                        <TableBody>
-                            {rows.map(row => (
-                                <StyledTableRow key={row.name}>
-                                    <StyledTableCell component="th" scope="row">
-                                        {row.name}
-                                    </StyledTableCell>
-                                    <StyledTableCell align="right">{row.calories}</StyledTableCell>
-                                    <StyledTableCell align="right">{row.fat}</StyledTableCell>
-                                    <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+                    <Paper className={classes.paper}>
+                        <Typography className={classes.title}>Riwayat Transaksi</Typography>
+                        <Table className={classes.table} aria-label="simple table">
+                            <TableHead>
+                                <StyledTableRow>
+                                    <StyledTableCell className={classes.tableTitle}>Waktu Transaksi</StyledTableCell>
+                                    <StyledTableCell className={classes.tableTitle} align="right">Jenis Transaksi</StyledTableCell>
+                                    <StyledTableCell className={classes.tableTitle} align="right">Jumlah Transaksi</StyledTableCell>
+                                    <StyledTableCell className={classes.tableTitle} align="right">Rekening Terkait</StyledTableCell>
                                 </StyledTableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
+                            </TableHead>
+                            <TableBody>
+                                {rows.map(row => (
+                                    <StyledTableRow key={row.name}>
+                                        <StyledTableCell component="th" scope="row">
+                                            {row.name}
+                                        </StyledTableCell>
+                                        <StyledTableCell align="right">{row.calories}</StyledTableCell>
+                                        <StyledTableCell align="right">{row.fat}</StyledTableCell>
+                                        <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+                                    </StyledTableRow>
+                                ))}
+                            </TableBody>
+                        </Table>
+                    </Paper>
                 </Grid>
             </Grid>
         </div>
