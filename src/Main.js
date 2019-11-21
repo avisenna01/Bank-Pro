@@ -12,7 +12,6 @@ const Main = () => {
         <Header />
         <Route path="/login" component={LoginPage} />
         {/* <Route path="/" component={HomePage} /> */}
-
       </Grid>
     </Router>
   );
