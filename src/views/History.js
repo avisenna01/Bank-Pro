@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-
 import Grid from '@material-ui/core/Grid';
-
 import Typography from '@material-ui/core/Typography';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -21,7 +19,9 @@ const useStyles = makeStyles(theme => ({
 
     },
     table: {
-        minWidth: 700,
+        minWidth: 1000,
+        minHeight: 500,
+
     },
 
 }));
@@ -70,7 +70,6 @@ const History = props => {
                                 <StyledTableCell align="right">Jenis Transaksi</StyledTableCell>
                                 <StyledTableCell align="right">Jumlah Transaksi</StyledTableCell>
                                 <StyledTableCell align="right">Rekening Terkait</StyledTableCell>
-
                             </StyledTableRow>
                         </TableHead>
                         <TableBody>
@@ -82,7 +81,6 @@ const History = props => {
                                     <StyledTableCell align="right">{row.calories}</StyledTableCell>
                                     <StyledTableCell align="right">{row.fat}</StyledTableCell>
                                     <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-
                                 </StyledTableRow>
                             ))}
                         </TableBody>
