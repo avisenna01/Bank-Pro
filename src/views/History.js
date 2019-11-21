@@ -8,16 +8,15 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import { fontFamily } from '@material-ui/system';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
         width: '100%',
-        marginTop: theme.spacing(3),
         overflowX: 'auto',
-        paddingTop: "150px",
-        paddingBottom: "150px"
+        paddingTop: "50px",
+        height: "100vh"
     },
     table: {
         minWidth: 1000,
@@ -33,7 +32,8 @@ const useStyles = makeStyles(theme => ({
     },
     tableTitle: {
         fontSize: "20px"
-    }
+    },
+    icon: { marginBottom: "15px", color: "white", fontSize: "50px", border: "5px solid #66BBFF", borderRadius: "50%", backgroundColor: "#66BBFF" }
 }));
 
 const StyledTableCell = withStyles(theme => ({
@@ -74,6 +74,7 @@ const History = props => {
         <div className={classes.root}>
             <Grid container justify="center" alignItems="center">
                 <Grid item>
+                    <ArrowBackIcon className={classes.icon} />
                     <Paper className={classes.paper}>
                         <Typography className={classes.title}>Riwayat Transaksi</Typography>
                         <Table className={classes.table} aria-label="simple table">
