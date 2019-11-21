@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
@@ -38,11 +38,9 @@ const inputBox = {
 const LoginPage = props => {
 
   const classes = useStyles();
-  const [acc, setAcc] = useState();
 
   const handleChange = event => {
-    setAcc(event.target.value);
-    console.log(acc)
+    console.log(event.target.value)
   };
 
 
@@ -52,7 +50,7 @@ const LoginPage = props => {
         <Typography className={classes.title}>Bank Pro</Typography>
       </Grid>
       <Grid item xs={12} container justify="center" alignItems="center" style={{ paddingBottom: "400px" }}>
-        <input onChange={handleChange} value={acc} style={inputBox} type="text" placeholder="Account Number" />
+        <input onChange={handleChange} style={inputBox} type="text" placeholder="Account Number" />
       </Grid>
     </Grid>
   );
