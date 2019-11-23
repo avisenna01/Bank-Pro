@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import LoginPage from "./views/LoginPage";
 import Grid from "@material-ui/core/Grid";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import AutoRoute from "./AuthRoute"
+// import AutoRoute from "./AuthRoute"
 
 const Main = () => {
  

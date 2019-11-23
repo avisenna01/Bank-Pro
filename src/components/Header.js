@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Header = props => {
+const Header = () => {
   const classes = useStyles();
 
   return <Paper className={classes.root}><img alt="logo" src={logo} width="20px" height="24px" /></Paper>;

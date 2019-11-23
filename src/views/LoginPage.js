@@ -35,7 +35,7 @@ const inputBox = {
   paddingLeft: "15px"
 }
 
-const LoginPage = props => {
+const LoginPage = () => {
 
   const classes = useStyles();
 
