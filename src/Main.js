@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import AutoRoute from "./AuthRoute"
 
 const Main = () => {
+ 
   return (
     <Router>
       <Grid>
@@ -15,6 +16,6 @@ const Main = () => {
       </Grid>
     </Router>
   );
-};
+}
 
 export default Main;
