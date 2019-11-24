@@ -3,6 +3,11 @@ Home - 13517052
 Transfer - 13517097
 Transaction History - 13517010
 
+Pembagian Tugas DPPL :
+1. CI/CD : 13517010
+2. Unit testing : 13517010
+3. Eksplorasi dan Mesin deployment : 13517097
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
