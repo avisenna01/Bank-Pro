@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component try 2 snapshot renders 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation1 makeStyles-root-1 MuiPaper-rounded"
+>
+  <img
+    alt="logo"
+    height="24px"
+    src="apple1.png"
+    width="20px"
+  />
+</div>
+`;

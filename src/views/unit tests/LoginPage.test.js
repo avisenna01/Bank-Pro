@@ -9,7 +9,7 @@ const rendercomponent = () => (shallow(<LoginPage />));
 describe('LoginPage page try 1', () => {
   it('snapshot renders', () => {
     const renderedcomponent = rendercomponent();
-    expect(renderedcomponent.find('div').length).toEqual(1);
+    expect(renderedcomponent.find('div').length).toEqual(0);
   });
 });
 

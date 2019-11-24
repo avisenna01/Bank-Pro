@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage page try 2 snapshot renders 1`] = `
+<div
+  className="MuiGrid-root makeStyles-root-1 MuiGrid-container"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+  >
+    <p
+      className="MuiTypography-root makeStyles-title-2 MuiTypography-body1"
+    >
+      Bank Pro
+    </p>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center MuiGrid-grid-xs-12"
+    style={
+      Object {
+        "paddingBottom": "400px",
+      }
+    }
+  >
+    <input
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Account Number"
+      style={
+        Object {
+          "backgroundColor": "white",
+          "border": "4px solid #66BBFF",
+          "borderRadius": "10px",
+          "fontSize": "20px",
+          "height": "40px",
+          "marginTop": "15px",
+          "padding": "5px",
+          "paddingLeft": "15px",
+          "width": "250px",
+        }
+      }
+      type="text"
+    />
+  </div>
+</div>
+`;
