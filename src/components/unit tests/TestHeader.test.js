@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import Header from "./Header";
+import Header from "../Header";
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
@@ -14,7 +14,7 @@ describe('Header component try 1', () => {
 });
 
 describe("Header component try 2", () => {
-  test("Matches the snapshot", () => {
+  test("snapshot renders", () => {
     const button = renderer.create(<Header />);
     expect(button.toJSON()).toMatchSnapshot();
   });

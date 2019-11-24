@@ -16,7 +16,7 @@ const Main = () => {
       <Switch>
         <Grid>
           <Header />
-          <Route exact path="/" component={LoginPage} />
+          <Route exact path="/" component={AuthRoute(HomePage)} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/home" component={AuthRoute(HomePage)} />
           <Route exact path="/history" component={AuthRoute(History)} />
