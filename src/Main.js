@@ -14,7 +14,7 @@ const Main = () => {
       <Grid>
         <Header />
         <Route path="/login" component={LoginPage} />
-        <Route path="/" component={HomePage} />
+        <Route exact path="/" component={HomePage} />
         <Route path="/history" component={History} />
       </Grid>
     </Router>

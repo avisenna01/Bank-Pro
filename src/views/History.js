@@ -9,6 +9,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -67,14 +68,14 @@ const rows = [
     createData('september 1', 'kredit', `Rp` + 16000, 49345235325),
 ];
 
-const History = props => {
+const History = () => {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
             <Grid container justify="center" alignItems="center">
                 <Grid item>
-                    <ArrowBackIcon className={classes.icon} />
+                    <Link to="/"><ArrowBackIcon className={classes.icon} /></Link>
                     <Paper className={classes.paper}>
                         <Typography className={classes.title}>Riwayat Transaksi</Typography>
                         <Table className={classes.table} aria-label="simple table">

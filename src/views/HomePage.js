@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const HomePage = props => {
+const HomePage = () => {
     const classes = useStyles();
 
     const handleTransfer = () => {
@@ -124,7 +124,7 @@ const HomePage = props => {
                 </Paper></Grid>
                 <Grid style={{ marginLeft: "1px" }} justify="center" container item xs={12} spacing={3}>
                     <Grid item xs={6} sm={3}><Paper className={classes.paper}>
-                        <Button component={Link} to="/riwayat">
+                        <Button component={Link} to="/history">
                             <Typography variant="h5" gutterBottom>Riwayat Transaksi</Typography>
                         </Button></Paper></Grid>
                     <Grid item xs={6} sm={3}><Paper className={classes.paper}>
