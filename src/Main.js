@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "./views/HomePage";
 import History from "./views/History";
-// import AutoRoute from "./AuthRoute"
+import AuthRoute from "./AuthRoute"
 
 const Main = () => {
 
@@ -14,8 +14,8 @@ const Main = () => {
       <Grid>
         <Header />
         <Route path="/login" component={LoginPage} />
-        <Route exact path="/" component={HomePage} />
-        <Route path="/history" component={History} />
+        <Route exact path="/" component={AuthRoute(HomePage)} />
+        <Route path="/history" component={AuthRoute(History)} />
       </Grid>
     </Router>
   );
