@@ -8,9 +8,12 @@ Pembagian Tugas DPPL :
 2. Unit testing : 13517010
 3. Eksplorasi dan Mesin deployment : 13517097
 
+<<<<<<< HEAD
 URL Deployment : http://3.135.192.245:3000/<endpoint>
 
 
+=======
+>>>>>>> Update README.md
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
