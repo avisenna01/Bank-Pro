@@ -1,0 +1,25 @@
+image: node:latest
+
+stages:
+  - lint
+  - test
+
+eslint:
+  stage: lint
+  script:
+    # Install ESLint in this docker container
+    - npm install eslint
+    # Configure ESLint (will read your .eslintrc file)
+    - npx eslint --init
+    # Run ESLint
+    - npx eslint .
+
+testing:
+  stage: test
+  script:
+    # install jest
+    - npm install jest
+    # init jest
+    - npx jest --init
+    # run the script test
+    - npm test
